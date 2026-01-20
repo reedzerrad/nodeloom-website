@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48" fill="none">
+  <defs>
+    <linearGradient id="nodeGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6366F1"/>
+      <stop offset="50%" stop-color="#8B5CF6"/>
+      <stop offset="100%" stop-color="#A78BFA"/>
+    </linearGradient>
+    <linearGradient id="threadGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06B6D4"/>
+      <stop offset="100%" stop-color="#22D3EE"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background rounded square -->
+  <rect x="2" y="2" width="44" height="44" rx="10" fill="#0F0D1A"/>
+
+  <!-- Thread lines (horizontal weave) -->
+  <path d="M10 16 Q18 12, 24 16 Q30 20, 38 16" stroke="url(#threadGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M10 24 Q18 28, 24 24 Q30 20, 38 24" stroke="url(#threadGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+  <path d="M10 32 Q18 28, 24 32 Q30 36, 38 32" stroke="url(#threadGrad)" stroke-width="2.5" fill="none" stroke-linecap="round"/>
+
+  <!-- Nodes at key intersections -->
+  <circle cx="10" cy="16" r="3" fill="url(#nodeGrad)"/>
+  <circle cx="24" cy="16" r="3.5" fill="url(#nodeGrad)"/>
+  <circle cx="38" cy="16" r="3" fill="url(#nodeGrad)"/>
+
+  <circle cx="10" cy="24" r="2.5" fill="url(#nodeGrad)" opacity="0.9"/>
+  <circle cx="24" cy="24" r="4.5" fill="url(#nodeGrad)"/>
+  <circle cx="38" cy="24" r="2.5" fill="url(#nodeGrad)" opacity="0.9"/>
+
+  <circle cx="10" cy="32" r="3" fill="url(#nodeGrad)"/>
+  <circle cx="24" cy="32" r="3.5" fill="url(#nodeGrad)"/>
+  <circle cx="38" cy="32" r="3" fill="url(#nodeGrad)"/>
+</svg>
