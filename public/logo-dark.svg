@@ -1,43 +1,64 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 48" fill="none">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 52" fill="none">
   <defs>
-    <linearGradient id="nodeGradientD" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#818CF8"/>
-      <stop offset="50%" stop-color="#A78BFA"/>
-      <stop offset="100%" stop-color="#C4B5FD"/>
+    <linearGradient id="shield-stroke-dark" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#67e8f9"/>
+      <stop offset="100%" stop-color="#22d3ee"/>
     </linearGradient>
-    <linearGradient id="threadGradientD" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" stop-color="#22D3EE"/>
-      <stop offset="100%" stop-color="#67E8F9"/>
+    <linearGradient id="shield-fill-dark" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#06b6d4" stop-opacity="0.03"/>
     </linearGradient>
+    <clipPath id="shield-clip-dark">
+      <path d="M26 4 L46 10 L46 26 C46 36 36 46 26 48 C16 46 6 36 6 26 L6 10 Z"/>
+    </clipPath>
   </defs>
 
-  <!-- Icon: Interwoven nodes forming a loom pattern -->
-  <g transform="translate(4, 4)">
-    <!-- Thread lines (horizontal weave) -->
-    <path d="M8 12 Q16 8, 24 12 Q32 16, 40 12" stroke="url(#threadGradientD)" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <path d="M8 20 Q16 24, 24 20 Q32 16, 40 20" stroke="url(#threadGradientD)" stroke-width="2" fill="none" stroke-linecap="round"/>
-    <path d="M8 28 Q16 24, 24 28 Q32 32, 40 28" stroke="url(#threadGradientD)" stroke-width="2" fill="none" stroke-linecap="round"/>
+  <!-- Matrix Shield -->
+  <g transform="translate(0, 0)">
+    <!-- Shield outline -->
+    <path d="M26 4 L46 10 L46 26 C46 36 36 46 26 48 C16 46 6 36 6 26 L6 10 Z"
+          fill="#0a1628" stroke="url(#shield-stroke-dark)" stroke-width="2.5"/>
 
-    <!-- Vertical thread connections -->
-    <path d="M16 6 L16 34" stroke="url(#nodeGradientD)" stroke-width="1.5" fill="none" opacity="0.3"/>
-    <path d="M32 6 L32 34" stroke="url(#nodeGradientD)" stroke-width="1.5" fill="none" opacity="0.3"/>
+    <!-- Inner shield glow -->
+    <path d="M26 8 L42 13 L42 26 C42 34 34 42 26 44 C18 42 10 34 10 26 L10 13 Z"
+          fill="url(#shield-fill-dark)"/>
 
-    <!-- Nodes at intersections -->
-    <circle cx="8" cy="12" r="3.5" fill="url(#nodeGradientD)"/>
-    <circle cx="24" cy="12" r="4" fill="url(#nodeGradientD)"/>
-    <circle cx="40" cy="12" r="3.5" fill="url(#nodeGradientD)"/>
+    <!-- Matrix data streams - clipped to shield -->
+    <g clip-path="url(#shield-clip-dark)">
+      <!-- Column 1 -->
+      <rect x="12" y="14" width="2.5" height="10" rx="1" fill="#22d3ee" opacity="0.35"/>
+      <rect x="12" y="26" width="2.5" height="8" rx="1" fill="#22d3ee" opacity="0.6"/>
+      <rect x="12" y="36" width="2.5" height="6" rx="1" fill="#22d3ee" opacity="0.3"/>
 
-    <circle cx="8" cy="20" r="3" fill="url(#nodeGradientD)" opacity="0.8"/>
-    <circle cx="24" cy="20" r="5" fill="url(#nodeGradientD)"/>
-    <circle cx="40" cy="20" r="3" fill="url(#nodeGradientD)" opacity="0.8"/>
+      <!-- Column 2 -->
+      <rect x="17" y="12" width="2.5" height="7" rx="1" fill="#22d3ee" opacity="0.45"/>
+      <rect x="17" y="21" width="2.5" height="12" rx="1" fill="#22d3ee" opacity="0.7"/>
+      <rect x="17" y="35" width="2.5" height="8" rx="1" fill="#22d3ee" opacity="0.4"/>
 
-    <circle cx="8" cy="28" r="3.5" fill="url(#nodeGradientD)"/>
-    <circle cx="24" cy="28" r="4" fill="url(#nodeGradientD)"/>
-    <circle cx="40" cy="28" r="3.5" fill="url(#nodeGradientD)"/>
+      <!-- Column 3 (center - brightest) -->
+      <rect x="22" y="10" width="3" height="8" rx="1" fill="#22d3ee" opacity="0.5"/>
+      <rect x="22" y="20" width="3" height="14" rx="1.5" fill="#67e8f9"/>
+      <rect x="22" y="36" width="3" height="8" rx="1" fill="#22d3ee" opacity="0.55"/>
+
+      <!-- Column 4 -->
+      <rect x="28" y="10" width="2.5" height="6" rx="1" fill="#22d3ee" opacity="0.4"/>
+      <rect x="28" y="18" width="2.5" height="11" rx="1" fill="#22d3ee" opacity="0.65"/>
+      <rect x="28" y="31" width="2.5" height="10" rx="1" fill="#22d3ee" opacity="0.45"/>
+
+      <!-- Column 5 -->
+      <rect x="33" y="12" width="2.5" height="9" rx="1" fill="#22d3ee" opacity="0.5"/>
+      <rect x="33" y="23" width="2.5" height="8" rx="1" fill="#22d3ee" opacity="0.6"/>
+      <rect x="33" y="33" width="2.5" height="7" rx="1" fill="#22d3ee" opacity="0.35"/>
+
+      <!-- Column 6 -->
+      <rect x="38" y="14" width="2.5" height="7" rx="1" fill="#22d3ee" opacity="0.35"/>
+      <rect x="38" y="23" width="2.5" height="9" rx="1" fill="#22d3ee" opacity="0.5"/>
+      <rect x="38" y="34" width="2.5" height="5" rx="1" fill="#22d3ee" opacity="0.25"/>
+    </g>
   </g>
 
-  <!-- Wordmark: NodeLoom (light for dark backgrounds) -->
-  <text x="60" y="33" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="26" font-weight="600" letter-spacing="-0.5">
-    <tspan fill="#E0E7FF">Node</tspan><tspan fill="url(#nodeGradientD)">Loom</tspan>
+  <!-- Wordmark for dark backgrounds -->
+  <text x="58" y="36" font-family="system-ui, -apple-system, 'Segoe UI', sans-serif" font-size="26" font-weight="700" letter-spacing="-0.5">
+    <tspan fill="#f1f5f9">Node</tspan><tspan fill="#22d3ee">Loom</tspan>
   </text>
 </svg>
